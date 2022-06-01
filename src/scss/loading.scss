@@ -1,0 +1,55 @@
+// inspiration: https://codepen.io/evawythien/pen/jegRxN
+
+$green: #4cd964;
+$turquoise: #5ac8fa;
+$blue: #007aff;
+$light-blue: #7dc8e8;
+$purple: #5856d6;
+$red: #ff2d55;
+
+body.loading::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: .125rem;
+  z-index: 10;
+  opacity: 0;
+  background-image: linear-gradient(to right, $green, $turquoise, $blue, $light-blue, $purple, $red);
+  transition: 0.4s linear;
+  transition-property: width, background-color;
+  animation: loadingColor 1s infinite, loadingDelay 100ms linear 400ms forwards;
+}
+
+@keyframes loadingDelay {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loadingColor {
+  0% {
+    background-image: linear-gradient(to right, $green, $turquoise, $blue, $light-blue, $purple, $red);
+  }
+
+  20% {
+    background-image: linear-gradient(to right, $turquoise, $blue, $light-blue, $purple, $red, $green);
+  }
+
+  40% {
+    background-image: linear-gradient(to right, $blue, $light-blue, $purple, $red, $green, $turquoise);
+  }
+
+  60% {
+    background-image: linear-gradient(to right, $light-blue, $purple, $red, $green, $turquoise, $blue);
+  }
+
+  100% {
+    background-image: linear-gradient(to right, $purple, $red, $green, $turquoise, $blue, $light-blue);
+  }
+}

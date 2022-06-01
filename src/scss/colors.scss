@@ -1,0 +1,48 @@
+:root {
+  --light: #{$light};
+  --dark: #{$dark};
+}
+
+// light
+body {
+  background-color: $light;
+  color: $dark;
+}
+
+.key {
+  background: rgba($light, .7);
+
+  [type="radio"]+span::after {
+    background: $dark;
+  }
+
+  /* border-color: rgba($dark, .75);
+  transition: border-color .15s;
+  &:hover {
+    border-color: $dark;
+  } */
+
+}
+
+// dark
+html.dark {
+
+  body {
+    background-color: $dark;
+    color: $light;
+  }
+
+  .key {
+    background: rgba($dark, .7);
+
+    [type="radio"]+span::after {
+      background: $light;
+    }
+
+    /* border-color: rgba($light, .75);
+    &:hover {
+      border-color: $light;
+    } */
+  }
+
+}

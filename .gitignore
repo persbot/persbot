@@ -1,0 +1,10 @@
+/node_modules/
+/public/build/
+
+/.vscode/
+
+/public/sw.*
+/public/workbox-*
+/public/pitch/
+
+.DS_Store
