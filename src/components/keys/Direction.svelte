@@ -13,7 +13,7 @@
 
 <div class="key">
   <FirstLastChild id="keys" is="first" />
-  <span><Icon name="Direction" />Orientation</span>
+  <span><Icon name="Direction" />Direction</span>
   {#each values as orientation}
     <label
       ><input type="radio" bind:group value={orientation} /><span
