@@ -208,7 +208,7 @@ html[data-keys_wrap="on"] body {
   }
 }
 
-html:not([data-keys_orientation="vertical"]) .key {
+html:not([data-keys_direction="vertical"]) .key {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
