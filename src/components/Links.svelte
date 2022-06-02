@@ -1,6 +1,5 @@
 <script lang="ts">
     import Icon from "./icon/Icon.svelte";
-    let clicked = 0;
 
     const links = [
         {
@@ -23,8 +22,7 @@
     >{#each links as { icon, text, link }}<span
             ><Icon name={icon} /><a
                 class="link"
-                on:click|preventDefault={() => clicked++}
                 href={link}>{text}</a
             ></span
-        >{/each}<span>{clicked || ""}</span>
+        >{/each}
 </div>
