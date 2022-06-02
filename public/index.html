@@ -31,7 +31,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 	<link rel='stylesheet' href='/build/bundle.css'>
 
-	<script>var c = b => "dark" === localStorage.dayNight || !("dayNight" in localStorage) && b ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark"), m = window.matchMedia("(prefers-color-scheme: dark)"); c(m.matches), m.addEventListener("change", (e => c(e.matches))); var kd = ["horizontal", "vertical"]; document.documentElement.dataset.keys_direction = kd.find((it) => it === localStorage.keys_direction) || kd[0]; document.documentElement.dataset.keys_wrap = ["off", "on"].find((it) => it === localStorage.keys_wrap) || 'off';</script>
+	<script>var c = b => "dark" === localStorage.dayNight || !("dayNight" in localStorage) && b ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark"), m = window.matchMedia("(prefers-color-scheme: dark)"); c(m.matches), m.addEventListener("change", (e => c(e.matches))); var kd = ["horizontal", "vertical"]; document.documentElement.dataset.keys_direction = kd.find((it) => it === localStorage.keys_direction) || kd[0]; var kw = ["off", "on"]; document.documentElement.dataset.keys_wrap = kw.find((it) => it === localStorage.keys_wrap) || kw[0];</script>
 	<script defer src='/build/bundle.js'></script>
 </head>
 

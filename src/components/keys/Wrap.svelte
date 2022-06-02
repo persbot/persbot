@@ -12,11 +12,8 @@
 
 <div class="key">
   <span><Icon name="Wrap" />Wrap</span>
-  {#each values as orientation}
-    <label
-      ><input type="radio" bind:group value={orientation} /><span
-      />{orientation}</label
-    >
+  {#each values as value}
+    <label><input type="radio" bind:group {value} /><span />{value}</label>
   {/each}
   <FirstLastChild id="keys" is="last" />
 </div>
