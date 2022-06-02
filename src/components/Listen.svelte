@@ -64,6 +64,10 @@
   };
 
   let group = "off";
+
+  window.addEventListener("beforeunload", () => {
+    group = "off";
+  });
 </script>
 
 <div class="key">
