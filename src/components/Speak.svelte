@@ -162,6 +162,7 @@
     };
 
     utterThis.onerror = (event) => {
+      document.body.classList.remove("loading");
       $errors = [JSON.stringify(event.error), ...$errors];
     };
 
@@ -172,6 +173,7 @@
     off();
     group = "off";
   });
+
   document.addEventListener("keyup", (e) => {
     if (e.key === "Escape") {
       off();
