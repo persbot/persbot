@@ -22,16 +22,16 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 	<link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5f00ff">
-	<meta name="msapplication-TileColor" content="#2b5797">
-	<meta name="theme-color" content="#d1d5db">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#6b7280">
+	<meta name="msapplication-TileColor" content="#f9fafb">
+	<meta name="theme-color" content="#f9fafb">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 	<link rel='stylesheet' href='/build/bundle.css'>
 
-	<script>var c = b => "dark" === localStorage.dayNight || !("dayNight" in localStorage) && b ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark"), m = window.matchMedia("(prefers-color-scheme: dark)"); c(m.matches), m.addEventListener("change", (e => c(e.matches))); document.documentElement.dataset.keys_orientation = ["horizontal", "vertical"].find((it) => it === localStorage.keys_orientation) || 'horizontal'; document.documentElement.dataset.keys_wrap = ["off", "on"].find((it) => it === localStorage.keys_wrap) || 'off';</script>
+	<script>var c = b => "dark" === localStorage.dayNight || !("dayNight" in localStorage) && b ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark"), m = window.matchMedia("(prefers-color-scheme: dark)"); c(m.matches), m.addEventListener("change", (e => c(e.matches))); var kd = ["horizontal", "vertical"]; document.documentElement.dataset.keys_direction = kd.find((it) => it === localStorage.keys_direction) || kd[0]; var kw = ["off", "on"]; document.documentElement.dataset.keys_wrap = kw.find((it) => it === localStorage.keys_wrap) || kw[0];</script>
 	<script defer src='/build/bundle.js'></script>
 </head>
 
