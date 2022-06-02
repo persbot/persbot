@@ -16,18 +16,24 @@
 
   recognition.addEventListener("result", (event) => {
     const pop = Array.from(event.results).pop() as any;
-    // console.log(pop[0].transcript);
+
     if (!pop.isFinal) return;
+
     const text = pop[0].transcript;
+
     const el = document.querySelector(
       "[data-hear='" + text.trim() + "']"
     ) as HTMLElement | null;
+
     if (!el) return (recognized = recognized === 3 ? 4 : 3);
+
     recognized = recognized === 1 ? 2 : 1;
+
     el.classList.add("on");
-    setTimeout(() => {
-      el.classList.remove("on");
-    }, 300);
+    setTimeout(() => el.classList.remove("on"), 300);
+
+    el.scrollIntoView(false);
+
     el.click();
   });
 
