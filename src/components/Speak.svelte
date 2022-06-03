@@ -164,6 +164,7 @@
     utterThis.onerror = (event) => {
       document.body.classList.remove("loading");
       $errors = [JSON.stringify(event.error), ...$errors];
+      group = "off";
     };
 
     synth.speak(utterThis);
