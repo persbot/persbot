@@ -13,11 +13,11 @@
     onMount(async () => {
         fetch(url + "pitch.json", { cache: "reload" })
             .then((response) => {
-                if (!response.ok) throw Error(response.statusText);
+                if (!response.ok) throw Error("" + response.status);
                 return response.json();
             })
             .then((json) => (content = json))
-            .catch((error) => ($errors = ["Url: " + error.message, ...$errors]))
+            .catch((error) => ($errors = ["Pitch " + error, ...$errors]))
             .finally(() => document.body.classList.remove("loading"));
     });
 
