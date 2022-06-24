@@ -1,8 +1,8 @@
 import { writable } from 'svelte/store';
 import type D3 from './3d';
 
-export const dayNight = writable<string>(localStorage.getItem('dayNight') || '')
-dayNight.subscribe(up => up ? localStorage.setItem("dayNight", up) : localStorage.removeItem('dayNight'))
+export const daynight = writable<string>(localStorage.getItem('daynight') || '')
+daynight.subscribe(up => up ? localStorage.setItem("daynight", up) : localStorage.removeItem('daynight'))
 
 export const errors = writable<string[]>([])
 
