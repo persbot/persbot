@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { dayNight } from "../store";
+  import { daynight } from "../store";
   import Icon from "./icon/Icon.svelte";
 
   const items = [
@@ -10,7 +10,7 @@
         window.matchMedia("(prefers-color-scheme: dark)").matches
           ? document.documentElement.classList.add("dark")
           : document.documentElement.classList.remove("dark");
-        $dayNight = "";
+        $daynight = "";
       },
     },
     {
@@ -18,7 +18,7 @@
       text: "light",
       onInput: () => {
         document.documentElement.classList.remove("dark");
-        $dayNight = "light";
+        $daynight = "light";
       },
     },
     {
@@ -26,12 +26,12 @@
       text: "dark",
       onInput: () => {
         document.documentElement.classList.add("dark");
-        $dayNight = "dark";
+        $daynight = "dark";
       },
     },
   ];
 
-  let group: string = $dayNight || items[0].text;
+  let group: string = $daynight || items[0].text;
 </script>
 
 <div class="key">

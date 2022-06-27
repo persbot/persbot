@@ -1,7 +1,7 @@
 import { Scene, PerspectiveCamera, WebGLRenderer, AnimationMixer, Clock, Color, Material, Group, Box3, Vector3, } from 'three'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { errors, dayNight, } from './store'
+import { errors, daynight, } from './store'
 import TWEEN from '@tweenjs/tween.js'
 
 const
@@ -63,7 +63,7 @@ matchColorSchemeDark.addEventListener("change", (e => {
   for (const key in d3models) d3models[key]?.materials?.forEach(updateMaterialColor)
 }))
 
-dayNight.subscribe(() => {
+daynight.subscribe(() => {
   flipColors(matchColorSchemeDark.matches)
 
   for (const key in d3models) d3models[key]?.materials?.forEach(updateMaterialColor)
@@ -128,8 +128,6 @@ const add = (url: string, filename: string, cb: (model: Group) => void) => {
   d3models[filename] = { materials: [] }
 
   loader.load(
-    // '/media/' + filename + '.glb',
-    // 'http://localhost:8080/db/' + filename + '.glb',
     url + filename + '.glb',
     gltf => {
 
