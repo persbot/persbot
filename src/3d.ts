@@ -46,7 +46,7 @@ const
     return true
   },
   flipColors = (b: boolean) => {
-    if ("dark" === localStorage.dayNight || !("dayNight" in localStorage) && b) {
+    if ("dark" === localStorage.daynight || !("daynight" in localStorage) && b) {
       cssFgColor = colorLight
       cssBgColor = colorDark
     } else {
